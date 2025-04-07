@@ -14,7 +14,13 @@ All the setup must be configured in ```config.py```:
 - Hyperparameters and More:
   - BREVITAS_MODEL: choose between FP32 or Quantized model, which is used to decide if some libraries are imported.
   - LOAD_MODEL: allows to load a checkpoint and keep on training.
-  - Quantization: configure the bit precision of different stages of the model, to overwrite defaults values.     
+  - Quantization: configure the bit precision of different stages of the model, to overwrite defaults values.
+
+Finally, to train the models:
+- train.ipynb: trains FP32 model in Pytorch.
+- train_brevitas.ipynb:
+  - Trains Brevitas model.
+  - Adds a Bipolar Quantizer at the end of the model, to facilitate deployment in FINN and evaluate again to be sure metrics are the same.
 
 
 ## Datasets and Loss Function
@@ -42,7 +48,7 @@ self.cfgs = [
 
 output_channel = _make_divisible(1280 * width_mult, 4 if width_mult == 0.1 else 8) if width_mult > 1.0 else 1280
 ```
-- Ours:
+- Ours: minimize inverted residuals and final convolution.
 ```python
 self.cfgs = [
     # t, c, n, s
