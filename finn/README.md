@@ -1,13 +1,13 @@
 # FINN Folder contents:
 
 - Folders:
-  - Folding config: final hw config and manual folding config after estimate.
+  - Folding config: manual folding config after estimate and final hw config, with all FIFOs inserted.
   - ONNX models: model used to feed FINN workflow.
 
 - Notebooks:
   - analysis_hw_reports: analyze all outputs of HW report, after estimate or full build, to understand if it is possible to optimize somehow, assigning resources in a better way.
   - compare_post_synth_resources: compares two different full build projects, to highlight key differences.
-  - config.py: setup of folders and experiments names.
+  - config.py: setup of folders and experiments name.
   - eval_stitched_ip: rtl simulation of the stitched ONNX model.
   - finn_build_config_pynq_z1: all steps to generate the bitfile and deploy folder of model proposed. There are 3 main options:
     - Estimate: only first estimate.
