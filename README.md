@@ -10,3 +10,10 @@ Project to classify wildfires with a tiny MobileNetV2 based network.
 - finn: notebooks to build the driver, analyze results, evaluate the stitched version, create the verilog testbench and prune the ONNX model based on convolution channel sparsity.
 - pynq-z1: notebooks to evaluate the datasets and run inference loop with threads and a camera.
 
+## Metrics
+
+| Model  | Weights | MAC | F1-Macro |
+| :---         |     :---:      |     :---:      |          ---: |
+| MobileNetV2 Original  | 2.22 M  | 300 M | 97.65 % |
+| MobileNetV2 Nano FPGA  | 68.8 K  | 42 M | 95.32 % |
+
