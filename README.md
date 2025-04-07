@@ -1,6 +1,6 @@
 # wildfire-on-PYNQ-Z1
 
-Project to classify wildfires with a MobileNetV2 based network, very reduced.
+Project to classify wildfires with a tiny MobileNetV2 based network.
 
 ## Project Organization
 
