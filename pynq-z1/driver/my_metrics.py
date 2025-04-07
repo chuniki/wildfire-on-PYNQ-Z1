@@ -104,8 +104,7 @@ def get_mean_metrics(smoke_metrics, fire_metrics):
     return mean_dic
 
 
-# def eval_accel(imgs_list, labels_dir, accel):
-def eval_accel(datasets_dict, dfire_labels_dir, accel):
+def eval_accel(accel, datasets_dict, dfire_labels_dir=None):
         
     smoke_true = []
     smoke_pred = []
@@ -121,6 +120,7 @@ def eval_accel(datasets_dict, dfire_labels_dir, accel):
 
             # print(f'Image file: {img_file}')
             if "dfire" in dataset:
+                assert dfire_labels_dir is not None, "DFire labels dir must be provided"
                 img, label = load_dfire_image_and_label(img_file, dfire_labels_dir)
             elif "fasdd" in dataset:
                 img, label = load_fasdd_image_and_label(img_file)

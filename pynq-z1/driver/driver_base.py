@@ -376,6 +376,7 @@ class FINNExampleOverlay(Overlay):
             raise Exception("Unrecognized platform: %s" % self.platform)
         # blocking behavior depends on asynch parameter
         if asynch is False:
+            #print(f'Asynch = {asynch} -> block until finished')
             self.wait_until_finished()
 
     def wait_until_finished(self):
