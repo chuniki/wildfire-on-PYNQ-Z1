@@ -12,6 +12,8 @@ Project to classify wildfires with a tiny MobileNetV2 based network.
 
 ## Metrics
 
+The model achieves 32 fps with the FPGA clocked at 4 MHz and an average power consumption of 2.5W on the PYNQ-Z1.
+
 | Model  | Weights | MAC | F1-Macro |
 | :---         |     :---:      |     :---:      |          ---: |
 | MobileNetV2 Original  | 2.22 M  | 300 M | 97.65 % |
