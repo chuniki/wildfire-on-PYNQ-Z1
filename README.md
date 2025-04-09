@@ -1,6 +1,6 @@
 # wildfire-on-PYNQ-Z1
 
-Project to classify wildfires with a tiny MobileNetV2 based network.
+Project to classify wildfires with a tiny MobileNetV2-based network.
 
 ## Project Organization
 
@@ -12,12 +12,14 @@ Project to classify wildfires with a tiny MobileNetV2 based network.
 
 ## Metrics
 
+Comparison between the original model and the tiny MobileNetV2 model deployed on the FPGA. 
+
 | Model  | Weights | MAC | F1-Macro |
 | :---         |     :---:      |     :---:      |          ---: |
 | MobileNetV2 Original  | 2.22 M  | 300 M | 97.65 % |
 | MobileNetV2 Nano FPGA  | 68.8 K  | 42 M | 95.32 % |
 
-The model achieves 32 fps with the FPGA clocked at 4 MHz and an average power consumption of 2.5W on the PYNQ-Z1.
+The tiny MobileNetV2 model model achieves 32 fps with the FPGA clocked at 4 MHz and an average power consumption of 2.5W on the PYNQ-Z1.
 
 | FPGA clock | PYNQ-Z1 average power | fps  |
 |     :---:      |     :---:      |     :---:      |
